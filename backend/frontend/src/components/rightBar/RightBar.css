@@ -1,0 +1,86 @@
+
+@media only screen and (max-width:420px) {
+    .rightBar {
+        display: none !important;
+        
+    }
+}
+
+
+
+#rightBarr::-webkit-scrollbar {
+    display: none;
+}
+
+.rightBar {
+
+
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;    
+}
+    .rightBar .container {
+        padding: 20px;
+    }
+        .rightBar .item {
+        box-shadow: 0px 0px 15px 1px  rgb(226, 224, 224);
+        padding: 20px;
+        margin: 20px;
+      }
+        .rightBar .item span {
+            color: gray;
+        }
+        .rightBar .user {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0px;
+        }
+            .rightBar .user_info {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+            }
+                .rightBar .user_info img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                   
+                }
+                .online {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: limegreen;
+                    position: absolute;
+                    top: 0px;
+                    left: 23px;
+                }
+                .rightBar .user_info p {
+                    color: gray;
+                }
+                    .rightBar .user_info span {
+                        font-weight: 500;
+                        color: rgb(0, 0, 0);
+                    }
+            .rightBar .buttons {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+                .rightBar .buttons button {
+                    border: none;
+                    padding: 5px;
+                    color: white;
+                    cursor: pointer;
+                }
+                .rightBar .buttons .follow_btn {
+                    background-color: rgb(79, 122, 215);
+                }
+                .rightBar .buttons .dismiss_btn {
+                    background-color: rgb(243, 21, 21);
+                }            

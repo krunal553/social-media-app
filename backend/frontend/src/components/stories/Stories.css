@@ -1,0 +1,49 @@
+
+@media only screen and (max-width:420px) {
+    .stories {
+        height: 100px;
+    }
+    .stories .story {
+        height: 90px;
+    }
+    .stories .story img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+
+#stories::-webkit-scrollbar {
+    display: none;
+}
+
+.stories {
+    display: flex;
+    gap: 10px;
+    height: 250px;
+    margin-bottom: 30px; 
+
+    overflow: scroll;
+}
+    .stories .story {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden ;
+        position: relative;
+    }
+        .stories .story img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .stories .story span{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+

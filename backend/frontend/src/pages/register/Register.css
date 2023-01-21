@@ -1,0 +1,86 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.register{
+    height: 100vh;
+    background-color: rgb(234, 235, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .reg_card{
+        display: flex;
+        width: 50%;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 550px;
+        overflow: hidden;
+        flex-direction: row-reverse;
+    }
+ 
+        .left_reg{
+            flex: 1;
+            /* background: linear-gradient(rgb(2, 2, 92), rgb(29, 5, 62)),rgb(237, 182, 182); */
+            background: linear-gradient(rgb(29, 29, 44), rgb(98, 91, 107)), url("../../resources/images/gojo.jpg");
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+        } 
+            .left_reg h1{
+                font-size: 100px;
+                line-height: 100px;
+            }
+            .left_reg p{
+                
+            }
+            .left_reg span{
+                font-size: 13px;
+            }
+            .left_reg button{
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: #fff;
+                color: rgb(97, 89, 104);
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+        .right_reg{
+            flex: 1;
+            padding: 50px; 
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+        }
+            .right_reg h1{
+                color: rgb(48, 52, 55);
+            }
+            .right_reg form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+                .right_reg input{
+                    border: none;
+                    border-bottom: 1px solid black;
+                    padding: 13px;
+                }
+                .right_reg button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: rgb(67, 59, 111);
+                    color: antiquewhite;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+

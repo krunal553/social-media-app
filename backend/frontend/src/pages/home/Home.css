@@ -1,0 +1,23 @@
+.home {
+    /* background-color: aliceblue; */
+    /* padding: 20px; */
+    scroll-behavior: smooth;
+}
+
+
+
+
+@media only screen and (max-width:420px) {
+
+   
+    .home {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 10px;
+        flex: none;
+        /* display: block; */
+    }
+}

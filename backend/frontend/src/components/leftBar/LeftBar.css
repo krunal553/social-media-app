@@ -1,0 +1,76 @@
+
+@media only screen and (max-width:420px) {
+    .leftBar {
+        display: none !important;
+    }
+}
+
+
+
+
+
+#leftBarr::-webkit-scrollbar {
+    display: none;
+}
+
+.leftBar {
+
+
+
+
+
+    flex: 2;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;    
+}
+    .leftBar .container {
+        padding: 20px;
+    }
+
+    hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: lightgray;
+    }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu span {
+            font-size: 12px;
+        }
+            .leftBar .user{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+                .leftBar .user img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .leftBar .user span {
+                    font-size: 14px;
+                }
+
+
+            .leftBar .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+                .leftBar .item img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .leftBar .item span {
+                    font-size: 14px;
+                }

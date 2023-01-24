@@ -2,23 +2,26 @@ import './Post.css';
 import { Link } from 'react-router-dom'
 import {useState} from 'react'
 
+
+import moreIcon from '../../resources/svgs/more.svg';
 import sendIcon from '../../resources/svgs/send.svg';
 import likeIcon from '../../resources/svgs/like.svg';
+import likedIcon from '../../resources/images/liked.png';
 import commentIcon from '../../resources/svgs/comment.svg';
 
 import Comments from '../comments/Comments';
 
 const Post = ({ post }) => {
 
-    const [commentOpen, setCommentOpen] = useState(false)
-
-    //Temporary
-    const liked = false;
+    const [commentOpen, setCommentOpen] = useState(false);
+    const [postLike, setPostLike] = useState(false);
+    
 
     return (
+        
         <div className='post'>
             <div className="container">
-                <div className="user">
+                <div className="user"> 
                     <div className="userInfo">
                         <img src={post.profilePic} alt="" />
                         <div className="details">
@@ -28,16 +31,18 @@ const Post = ({ post }) => {
                             <span className="date">2 hours ago</span>
                         </div>
                     </div>
+                    <img src={moreIcon} alt="more" height="25px" width="25px" />
+
                 </div>
                 <div className="content">
                     <p>{post.desc}</p>
-                    <img src={post.image} alt="" />
+                    <img src={post.image} alt="" onDoubleClick={()=>setPostLike(true)}/>
                 </div>
                 <div className="info">
-                    <div className="item">
-                        {liked ?
-                            <img src={likeIcon} alt="liked" /> :
-                            <img src={null} alt="like" />
+                    <div className="item" onClick={()=>setPostLike(!postLike)} >
+                        {postLike ?
+                            <img src={likedIcon} alt="liked" height="25px" width="25px"  /> :
+                            <img src={likeIcon} alt="like" height="25px" width="25px" />
                         }12 likes
                     </div>
                     <div className="item" onClick={()=>setCommentOpen(!commentOpen)}>

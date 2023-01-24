@@ -14,7 +14,6 @@ import { Navigate } from 'react-router-dom';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
 } from "react-router-dom";
 
@@ -38,8 +37,8 @@ function App() {
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <div style={{flex:"6"}}>
-          <Outlet />
+          <div style={{flex:"60vw",width:"60vw"}}>
+            <Outlet />
           </div>
           <RightBar />
         </div>

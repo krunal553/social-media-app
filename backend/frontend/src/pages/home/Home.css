@@ -1,7 +1,7 @@
 .home {
-    /* background-color: aliceblue; */
-    /* padding: 20px; */
     scroll-behavior: smooth;
+
+    /* border: 10px solid yellow; */
 }
 
 
@@ -12,12 +12,14 @@
    
     .home {
         display: flex;
+        padding: 0px;
+        margin: 0px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
 
-        padding: 10px;
-        flex: none;
-        /* display: block; */
+        scroll-behavior: smooth;
+
+        min-width: 100vw;
     }
 }

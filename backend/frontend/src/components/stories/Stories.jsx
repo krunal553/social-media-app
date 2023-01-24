@@ -26,17 +26,50 @@ const Stories = () => {
             name: "Helly C",
             image: gojo,
         },
+        {
+            id: 5,
+            name: "Helly C",
+            image: gojo,
+        },
+        {
+            id: 6,
+            name: "Helly C",
+            image: gojo,
+        },
+
+        {
+            id: 7,
+            name: "Helly C",
+            image: gojo,
+        }, {
+            id: 8,
+            name: "Helly C",
+            image: gojo,
+        }, {
+            id: 9,
+            name: "Helly C",
+            image: gojo,
+        },
+        {
+            id: 10,
+            name: "Helly C",
+            image: gojo,
+        }, {
+            id: 11,
+            name: "Helly C",
+            image: gojo,
+        },
     ];
 
     return (
-        <div className='stories'>
-            {stories.map(story=>(
-                <div className="story" key={story.id}>
-                    <img src={story.image} alt="" />
-                    <span>{story.name}</span>
-                </div>
-            ))}
-        </div>
+            <div className='stories' id='stories-id'>
+                {stories.map(story => (
+                    <div className="story" key={story.id}>
+                        <img src={story.image} alt="" />
+                        <span>{story.name}</span>
+                    </div>
+                ))}
+            </div>
     )
 }
 

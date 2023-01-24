@@ -2,10 +2,10 @@ import './LeftBar.css'
 
 import gojo from "../../resources/images/gojo.jpg";
 import friends from "../../resources/images/friends.png"
-import user from "../../resources/images/user.png"
+// import user from "../../resources/images/user.png"
 import people from "../../resources/images/people.png"
-import planner from "../../resources/images/planner.png"
-import donation from "../../resources/images/donation.png"
+// import planner from "../../resources/images/planner.png"
+// import donation from "../../resources/images/donation.png"
 import videoplayer from "../../resources/images/video-player.png"
 
 

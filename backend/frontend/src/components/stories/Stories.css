@@ -1,49 +1,60 @@
-
 @media only screen and (max-width:420px) {
     .stories {
-        height: 100px;
+        /* height: 100px; */
+        width: 100vw;
     }
     .stories .story {
-        height: 90px;
+        /* flex: none; */
+        height: 50px;
+        width: 50px;
+        padding: 0px 25px;
     }
-    .stories .story img{
-        height: 100%;
-        width: 100%;
+    .stories .story img {
         border-radius: 50%;
-        object-fit: cover;
+        border-radius: 5px solid purple;
+    }
+    .stories .story span {
+        display: none;
     }
 }
-
-
-#stories::-webkit-scrollbar {
+#stories-id::-webkit-scrollbar {
     display: none;
 }
-
 .stories {
+    border: 10px solid blue;
     display: flex;
     gap: 10px;
-    height: 250px;
-    margin-bottom: 30px; 
-
+    max-height: 230px;
+    margin-bottom: 10px;
+    align-items: center;
     overflow: scroll;
+    scroll-behavior: smooth;
+    padding: 15px;
 }
-    .stories .story {
-        flex: 1;
-        border-radius: 10px;
-        overflow: hidden ;
-        position: relative;
-    }
-        .stories .story img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        .stories .story span{
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            color: white;
-            font-weight: 500;
-        }
+.stories .story {
+    flex: 1;
+    position: relative;
+    border: 5px solid yellow;
+}
+.stories .story img {
+    height: 100%;
+    /* width: 100%; */
+    max-width: 220px;
 
 
+    min-height: 70px;
+    min-width: 70px;
+
+    border-radius: 15px;
+    object-fit: cover;
+
+
+}
+
+.stories .story span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}

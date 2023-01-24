@@ -1,7 +1,7 @@
 .home {
     scroll-behavior: smooth;
 
-    /* border: 10px solid yellow; */
+    /* border: 10px solid rgb(234, 255, 0); */
 }
 
 
@@ -14,12 +14,12 @@
         display: flex;
         padding: 0px;
         margin: 0px;
-        align-items: center;
+        /* align-items: center; */
         flex-direction: column;
         justify-content: center;
 
         scroll-behavior: smooth;
 
-        min-width: 100vw;
+        /* min-width: 100vw; */
     }
 }

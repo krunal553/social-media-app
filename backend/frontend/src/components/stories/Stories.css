@@ -1,17 +1,21 @@
 @media only screen and (max-width:420px) {
     .stories {
-        /* height: 100px; */
-        width: 100vw;
+        height:70px !important;
+        /* width: 100vw; */
     }
     .stories .story {
         /* flex: none; */
-        height: 50px;
-        width: 50px;
-        padding: 0px 25px;
+        /* height: 50px; */
+        border-radius: 50% !important;
+        /* width: 50px; */
+        /* padding: 0px 25px; */
     }
     .stories .story img {
-        border-radius: 50%;
-        border-radius: 5px solid purple;
+
+        height: 70px;
+        width: 70px;
+        border-radius: 50% !important;
+        
     }
     .stories .story span {
         display: none;
@@ -21,31 +25,32 @@
     display: none;
 }
 .stories {
-    border: 10px solid blue;
+    /* border: 10px solid blue; */
     display: flex;
     gap: 10px;
-    max-height: 230px;
+    height: 230px;
     margin-bottom: 10px;
-    align-items: center;
+    /* align-items: center; */
     overflow: scroll;
     scroll-behavior: smooth;
-    padding: 15px;
+    padding: 15px 15px;
 }
 .stories .story {
     flex: 1;
     position: relative;
-    border: 5px solid yellow;
+    border-radius: 15px;
+
+    /* border: 5px solid yellow; */
+    /* overflow: hidden; */
 }
 .stories .story img {
     height: 100%;
-    /* width: 100%; */
-    max-width: 220px;
-
-
-    min-height: 70px;
-    min-width: 70px;
-
+    
     border-radius: 15px;
+    border: 2px solid rgb(179, 179, 179);
+
+    padding: 1px;
+
     object-fit: cover;
 
 

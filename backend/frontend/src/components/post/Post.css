@@ -1,7 +1,16 @@
 
 @media only screen and (max-width:420px) {
     .post .container {
-        padding: 0px;        
+        padding: 0px !important ;        
+    }
+    .post .container .user {
+        padding: 10px;
+    }
+    .post .container .content p {
+        padding: 0px 10px;
+    }
+    .post .container .info {
+        padding: 10px;
     }
 }
 
@@ -20,7 +29,9 @@
         .post .container .user {
             display: flex;
             align-items: center;
-            justify-content: space-between;    
+            justify-content: space-between;  
+            
+            /* padding: 10px; */
         }
             .post .container .user .userInfo {
                 display: flex;
@@ -46,6 +57,7 @@
         .post .container .content {
             margin: 20px 0px;
         }
+            
             .post .container .content img {
                 width: 100%;
                 /* min-height: 50vh; */

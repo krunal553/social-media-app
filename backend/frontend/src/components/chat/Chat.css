@@ -1,0 +1,99 @@
+
+.chat {
+    height: 100vh;
+    background-color: rgb(234, 235, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat .chatBox{
+    /* display: flex;
+    flex-direction: row; */
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 900px;
+    overflow: hidden;
+}
+
+.chat .chatBox .user {
+}
+
+.chat .chatBox hr {
+    margin: 10px 25px;
+}
+
+.chat .chatBox .conversation {
+    height: 650px;
+}
+
+.chat .chatBox .user .userInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    padding: 20px 30px;
+}
+    .chat .chatBox .user .userInfo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .chat .chatBox .user .userInfo .details {
+        display: flex;
+        flex-direction: column;
+    }
+        .chat .chatBox .user .userInfo .details .name {
+            font-weight: 700;
+            font-size: 25px;
+        }
+        .chat .chatBox .user .userInfo .details .date {
+            font-size: 19px;
+            color: green;
+        }
+
+
+
+
+
+.chat .chatBox .chatSend {
+    /* display: flex;
+    align-items: center; */
+}
+
+.chat .chatBox .chatSend .typingArea {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chat .chatBox .chatSend .typingArea .typeMessage {
+    height: 45px;
+    width: calc(100% - 100px);
+    font-size: 20px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.chat .chatBox .chatSend .typingArea button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    border: none;
+    outline: none;
+    background: rgb(103, 103, 255);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+.chat .chatBox .chatSend .typingArea button img{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+

@@ -16,6 +16,7 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import Chat from "./components/chat/Chat";
 
 
 
@@ -37,7 +38,7 @@ function App() {
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <div style={{flex:"60vw",width:"60vw"}}>
+          <div style={{ flex: "60vw", width: "60vw" }}>
             <Outlet />
           </div>
           <RightBar />
@@ -50,7 +51,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: 
+      element:
         <ProtectedRoute>
           <Layout />
         </ProtectedRoute>,
@@ -72,7 +73,13 @@ function App() {
     {
       path: "/register",
       element: <Register />,
+    },
+
+    {
+      path: "/sample",
+      element: <Chat/>,
     }
+
   ]);
 
   return (

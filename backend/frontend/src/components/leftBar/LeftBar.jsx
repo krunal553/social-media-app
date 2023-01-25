@@ -1,5 +1,7 @@
 import './LeftBar.css'
 
+import { Link } from 'react-router-dom'
+
 import gojo from "../../resources/images/gojo.jpg";
 import friends from "../../resources/images/friends.png"
 // import user from "../../resources/images/user.png"
@@ -27,7 +29,9 @@ const LeftBar = () => {
             <span>Groups</span>
           </div><div className="item">
             <img src={null} alt="" />
-            <span>Marketplace</span>
+            <Link to="/sample/" style={{ textDecoration: "none" }}>
+              <span>Messages</span>
+            </Link>
           </div><div className="item">
             <img src={videoplayer} alt="" />
             <span>Watch</span>
@@ -71,7 +75,7 @@ const LeftBar = () => {
           </div><div className="item">
             <img src={null} alt="" />
             <span>Watch</span>
-            </div><div className="item">
+          </div><div className="item">
             <img src={null} alt="" />
             <span>Memories</span></div><div className="item">
             <img src={null} alt="" />

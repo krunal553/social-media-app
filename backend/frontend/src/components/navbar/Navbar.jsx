@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>Socio</span>
         </Link>
-        <img src={homeLogo} alt="Home" height="25px" width="25px" />
+        <img src={homeLogo} alt="Home" />
         {/* <homeLogo /> */}
         <img src={dark_modeLogo} alt="dark-mode" height="25px" width="25px" />
         <img src={appsLogo} alt="Apps" height="25px" width="25px" />

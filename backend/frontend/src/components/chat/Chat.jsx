@@ -3,19 +3,12 @@ import React from 'react'
 import "./Chat.css";
 import { Link } from 'react-router-dom'
 
-
-
-// import pp from '../../resources/images/honey.jpg';
-import gojo from '../../resources/images/gojo.jpg';
-
 // import moreIcon from '../../resources/svgs/more.svg';
 import sendIcon from '../../resources/svgs/send.svg';
 
 
 
-
-
-const Chat = () => {
+const Chat = ({user}) => {
   return (
     <div className="chat">
 
@@ -25,11 +18,11 @@ const Chat = () => {
 
           <div className="userInfo">
 
-            <img src={gojo} alt="" />
+            <img src={user.profilePic} alt="" />
 
             <div className="details">
               <Link to={`/profile/1`} style={{ textDecoration: "none" }}>
-                <span className='name'>Meet Chauhan</span>
+                <span className='name'>{user.name}</span>
               </Link>
               <span className="date">Active</span>
             </div>

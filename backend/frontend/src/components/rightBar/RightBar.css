@@ -8,18 +8,15 @@
 
 
 
-#rightBarr::-webkit-scrollbar {
-    display: none;
-}
-
 .rightBar {
-
-
     flex: 25vw;
     position: sticky;
     top: 70px;
     height: calc(100vh - 70px);
-    overflow: scroll;    
+    overflow: scroll; 
+
+}::-webkit-scrollbar {
+    display: none;
 }
     .rightBar .container {
         padding: 20px;

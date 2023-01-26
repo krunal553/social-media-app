@@ -1,0 +1,43 @@
+.chats {
+    display: flex;
+    flex-direction: row-reverse;
+    /* gap: 30px; */
+    background-color: rgb(234, 235, 244);
+    height: 100vh;
+}
+
+.chats .chatList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 15%;
+    box-shadow: 0px 0px 15px 1px rgb(226, 224, 224);
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+
+    overflow-y: scroll;
+
+}::-webkit-scrollbar {
+    display: none;
+}
+
+
+.chats .chatList .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.chats .chatList .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chats .chatList .user span {
+    font-size: 14px;
+}

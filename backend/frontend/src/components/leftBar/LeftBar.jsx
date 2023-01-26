@@ -20,7 +20,6 @@ const LeftBar = () => {
             <img src={gojo} alt="" />
             <span>Krunal M</span>
           </div>
-
           <div className="item">
             <img src={friends} alt="" />
             <span>Friends</span>

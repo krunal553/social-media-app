@@ -7,6 +7,8 @@ import Navbar from "./components/navbar/Navbar";
 import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
 
+import Chats from "./components/chats/Chats";
+
 // import './App.css';
 
 import { Navigate } from 'react-router-dom';
@@ -16,7 +18,7 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
-import Chat from "./components/chat/Chat";
+
 
 
 
@@ -63,6 +65,10 @@ function App() {
         {
           path: "/profile/:id",
           element: <Profile />,
+        },
+        {
+          path: "/sample",
+          element: <Chats />,
         }
       ]
     },
@@ -75,10 +81,7 @@ function App() {
       element: <Register />,
     },
 
-    {
-      path: "/sample",
-      element: <Chat/>,
-    }
+    
 
   ]);
 

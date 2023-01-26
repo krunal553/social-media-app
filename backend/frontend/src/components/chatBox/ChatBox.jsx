@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Chat.css";
+import "./ChatBox.css";
 import { Link } from 'react-router-dom'
 
 // import moreIcon from '../../resources/svgs/more.svg';
@@ -8,7 +8,7 @@ import sendIcon from '../../resources/svgs/send.svg';
 
 
 
-const Chat = ({user}) => {
+const ChatBox = ({user}) => {
   return (
     <div className="chat">
 
@@ -51,6 +51,6 @@ const Chat = ({user}) => {
   )
 }
 
-export default Chat
+export default ChatBox
 
 

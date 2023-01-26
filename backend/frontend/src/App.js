@@ -7,7 +7,9 @@ import Navbar from "./components/navbar/Navbar";
 import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
 
-import Chats from "./components/chats/Chats";
+import Chat from "./pages/chat/Chat";
+
+import {useState} from 'react'
 
 // import './App.css';
 
@@ -26,6 +28,8 @@ import {
 function App() {
 
   const currentUser = true;
+  
+  const [chatPageOpen, setChatPageOpen] = useState(false);
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
@@ -43,7 +47,8 @@ function App() {
           <div style={{ flex: "60vw", width: "60vw" }}>
             <Outlet />
           </div>
-          <RightBar />
+          {!chatPageOpen && <RightBar />}
+          
         </div>
       </div>
     );
@@ -66,10 +71,7 @@ function App() {
           path: "/profile/:id",
           element: <Profile />,
         },
-        {
-          path: "/sample",
-          element: <Chats />,
-        }
+       
       ]
     },
     {
@@ -80,7 +82,10 @@ function App() {
       path: "/register",
       element: <Register />,
     },
-
+    {
+      path: "/sample",
+      element: <Chat />,
+    }
     
 
   ]);
@@ -93,3 +98,4 @@ function App() {
 }
 
 export default App;
+

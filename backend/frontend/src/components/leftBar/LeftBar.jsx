@@ -28,7 +28,7 @@ const LeftBar = () => {
             <span>Groups</span>
           </div><div className="item">
             <img src={null} alt="" />
-            <Link to="/sample/" style={{ textDecoration: "none" }}>
+            <Link to="/sample/" style={{ textDecoration: "none" }} >
               <span>Messages</span>
             </Link>
           </div><div className="item">

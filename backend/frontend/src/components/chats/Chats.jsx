@@ -1,8 +1,8 @@
 import './Chats.css';
 
-import Chat from "../chat/Chat";
+import ChatBox from "../chatBox/ChatBox";
 
-import {useState} from 'react'
+import { useState } from 'react'
 
 import React from 'react'
 import { users } from '../../tempData';
@@ -19,15 +19,16 @@ const Chats = () => {
                 {users.map(user => (
                     <div className="user" key={user.userId}>
                         <img src={user.profilePic} alt="" />
-                        <span onClick={()=>setUser(user)}>{user.name}</span>
+                        <span onClick={() => setUser(user)}>{user.name}</span>
                     </div>
                 ))}
             </div>
-            <div style={{flex: '60%'}}>
-                { user && <Chat user={user} />}
+            <div style={{ flex: '60%' }}>
+                {user && <ChatBox user={user} />}
             </div>
-        </div>
+        </div> 
     )
 }
 
 export default Chats
+

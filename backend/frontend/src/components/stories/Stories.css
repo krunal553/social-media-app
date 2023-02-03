@@ -1,7 +1,8 @@
 @media only screen and (max-width:420px) {
     .stories {
         height:70px !important;
-        /* width: 100vw; */
+        width: 100vw;
+        align-items: center;
     }
     .stories .story {
         /* flex: none; */
@@ -34,6 +35,9 @@
     overflow: scroll;
     scroll-behavior: smooth;
     padding: 15px 15px;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 .stories .story {
     flex: 1;

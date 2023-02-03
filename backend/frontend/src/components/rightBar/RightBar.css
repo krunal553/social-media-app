@@ -15,6 +15,9 @@
     height: calc(100vh - 70px);
     overflow: scroll; 
 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
 }::-webkit-scrollbar {
     display: none;
 }
@@ -62,7 +65,7 @@
                 }
                     .rightBar .user_info span {
                         font-weight: 500;
-                        color: rgb(0, 0, 0);
+                        color: var(--text-color)
                     }
             .rightBar .buttons {
                 display: flex;

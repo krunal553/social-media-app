@@ -18,8 +18,8 @@
 .post {
     box-shadow: 0px 0px 25px -10px rgb(173, 173, 173);
     border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: var(--bg-color);
+    color: var(--text-color);
 
     /* border: 10px solid red; */
 }
@@ -38,8 +38,8 @@
                 gap: 20px;
             }
                 .post .container .user .userInfo img {
-                    width: 40px;
-                    height: 40px;
+                    max-width: 40px;
+                    max-height: 40px;
                     border-radius: 50%;
                     object-fit: cover;
                 }
@@ -72,8 +72,12 @@
             gap: 20px;
         }
             .post .container .info .item {
-                display: flex;
+            display: flex;
             align-items: center;
             gap: 10px;
             cursor: pointer;
+            }
+
+            .post .container .info .item>img {
+                filter: var(--logo-filter);
             }

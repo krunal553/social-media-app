@@ -6,11 +6,16 @@
 
 
 .leftBar {
-    flex: 15vw;
+    flex: 20%vw;
+    max-width: 20vw;
+    min-width: 15vw;
     position: sticky;
     top: 70px;
     height: calc(100vh - 70px);
     overflow: scroll;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }::-webkit-scrollbar {
     display: none;
 }

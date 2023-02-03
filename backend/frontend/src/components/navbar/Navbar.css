@@ -1,22 +1,48 @@
+:root {
+    --navbar-pc-height: 50px;
+    --navbar-mobile-height: 40px;
+    --navbar-padding: 10px 20px;    
+    --search-input: 500px;
+    --search-border: 1px solid lightgray;
+}
+
+/* @import '../../App.css'; */
+
 
 
 @media only screen and (max-width:420px) {
     .navbar {
-        display: none !important;
+        height: var(--navbar-mobile-height) !important;
+    }
+    .navbar .forPC {
+        display: none;
+    }
+    .navbar .search {
+        display: none;
+    }
+    .navbar .navbar_right {
+        display: none;
+    }
+    .navbar .navbar_left {
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
 .navbar {
+    /* display: none !important; */
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    height: 50px;
+    padding: var(--navbar-padding);
+    height: var(--navbar-pc-height);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0px;
-    background-color: white;
-    border-bottom: 1px solid rgb(242, 242, 242);
+    background-color: var(--bg-color);
     z-index: 999;
+    
 }
 
     .navbar_left {
@@ -27,18 +53,22 @@
         .navbar_left span{
             font-size: 20px;
             font-weight: bold;
-            color: darkblue;
+            color: var(--app-logo);
         }
             .search{
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                border: 1px solid lightgray;
+                border: var(--search-border);
                 border-radius: 5px;
+                padding: 5px;
             }
                 .navbar_left input {
                     border: none;
-                    width: 500px;
+                    width: var(--search-input);
+                    background-color: transparent;
+                    outline: none;
+                    color: var(--text-color);
                 }
                 
 
@@ -47,7 +77,7 @@
             align-items: center;
             gap: 20px;
     }
-        .user {
+        .navbar_right .user {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -60,6 +90,12 @@
                 border-radius: 50%;
                 object-fit: cover;
             }
-            .navbar_right span {
-
+            .navbar_right .user span {
+                color: var(--text-color);
             } 
+
+
+
+.navbar_right>img, .navbar_left>img, .navbar_left>.search>img, .navbar_left>.dark-mode>img {
+    filter: var(--logo-filter);
+}

@@ -1,13 +1,17 @@
 .home {
     scroll-behavior: smooth;
-
+    max-width: 60vw;
+    min-width: 35vh;
     /* border: 10px solid rgb(234, 255, 0); */
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 
 
 
-@media only screen and (max-width:420px) {
+@media only screen and (min-width:320px) and (max-width:480px) {
 
    
     .home {
@@ -20,6 +24,6 @@
 
         scroll-behavior: smooth;
 
-        /* min-width: 100vw; */
+        min-width: 100vw;
     }
 }

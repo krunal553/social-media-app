@@ -6,7 +6,6 @@ import {posts} from '../../tempData';
 
 const Posts = () => {
 
-  //TEMPORARY
   
   return (
     <div className='posts'>

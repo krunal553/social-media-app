@@ -1,5 +1,5 @@
 import './Post.css';
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 
 
@@ -15,7 +15,7 @@ const Post = ({ post }) => {
 
     const [commentOpen, setCommentOpen] = useState(false);
     const [postLike, setPostLike] = useState(false);
-    
+    const navigate = useNavigate();
 
     return (
         
@@ -28,6 +28,7 @@ const Post = ({ post }) => {
                             <Link to={`/profile/${post.userId}`} style={{ textDecoration: "none" }}>
                                 <span className='name'>{post.name}</span>
                             </Link>
+
                             <span className="date">2 hours ago</span>
                         </div>
                     </div>

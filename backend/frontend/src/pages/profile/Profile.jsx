@@ -15,21 +15,19 @@ const Profile = () => {
       </div>
       <div className="profileContainer">
         <div className="userInfo">
-          <div className="left">
+          {/* <div className="left">
             Icons
-          </div>
+          </div> */}
           <div className="center">
             <span>Krunal Makwana</span>
             <div className="info">
-              <div className="item">
+              {/* <div className="item">
                 item
-              </div>
+              </div> */}
               <button>follow</button>
             </div>
           </div>
-          <div className="right">
-
-          </div>
+          
         </div>
       </div>
         <Posts />

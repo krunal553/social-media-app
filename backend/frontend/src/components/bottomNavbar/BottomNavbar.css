@@ -1,0 +1,40 @@
+@media only screen and (max-width:420px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .bottomNavbar {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* gap: 50px; */
+        position: fixed;
+        bottom: 0px;
+        background-color: var(--bg-color);
+        z-index: 999;
+        border-top: 1px solid rgb(230, 230, 230);
+    }
+    .bottomNavbar .btTab {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bottomNavbar .navLogos {
+        filter: var(--logo-filter);
+        height: 27px;
+        width: 27px;
+    }
+}
+
+@media only screen and (min-width:421px) {
+    .bottomNavbar {
+        display: none;
+    }
+}

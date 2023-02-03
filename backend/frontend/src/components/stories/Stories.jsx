@@ -3,7 +3,6 @@ import './Stories.css';
 import {stories} from '../../tempData';
 
 const Stories = () => {
-
     return (
             <div className='stories' id='stories-id'>
                 {stories.map(story => (

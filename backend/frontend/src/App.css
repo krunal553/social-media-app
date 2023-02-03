@@ -1,0 +1,21 @@
+:root {
+    --bg-color: #ffffff;
+    --bg-soft-color: whitesmoke;
+    --text-color: black;
+    --app-logo: rgba(0, 0, 0, 0.703);
+    --logo-filter: invert(0);
+    --border: #444444;
+}
+
+[data-theme="dark"] {
+    --bg-color: black;
+    --bg-soft-color: rgb(71, 71, 71);
+    --text-color: white;
+    --app-logo: rgb(171, 252, 255);
+    --logo-filter: invert(1);
+    --border: #b6b6b6;
+}
+
+.App {
+    background-color: var(--bg-color);
+}

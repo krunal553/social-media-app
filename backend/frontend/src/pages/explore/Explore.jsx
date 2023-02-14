@@ -19,7 +19,7 @@ const Explore = () => {
 
   return (
     <div className='explore'>
-      <Search style={{ position: "sticky", top: "50px", zIndex: "999"}}/>
+      {/* <Search style={{ position: "sticky", top: "50px", zIndex: "999"}}/> */}
       <Masonry
         breakpointCols={breakpoints}
         className="my-masonry-grid"

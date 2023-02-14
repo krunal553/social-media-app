@@ -21,6 +21,7 @@
         width: 600px;
         height: 25px;
         outline: none;
+        background: transparent;
     }
     .search img {
         padding-left: 5px;

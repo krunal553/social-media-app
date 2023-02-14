@@ -5,13 +5,22 @@ import gojo from '../../resources/images/gojo.jpg';
 
 import Posts from '../../components/posts/Posts';
 
+import { useParams } from 'react-router-dom';
+import { users } from '../../tempData';
 
-const Profile = () => {
+
+const Profile = (props) => {
+
+  const { id } = useParams();
+
+  const user = users.filter(obj => obj.userId === parseInt(id));
+  // console.log(user);
+
   return (
     <div className='profile'>
       <div className="images">
-        <img src={gojo} alt="" className='cover' />
-        <img src={pp} alt="" className='profilePic' />
+        <img src={null} alt="" className='cover' />
+        <img src={user[0].profilePic} alt="" className='profilePic' />
       </div>
       <div className="profileContainer">
         <div className="userInfo">
@@ -19,7 +28,7 @@ const Profile = () => {
             Icons
           </div> */}
           <div className="center">
-            <span>Krunal Makwana</span>
+            <span> username{id} : {user[0].name}  </span>
             <div className="info">
               {/* <div className="item">
                 item
@@ -30,7 +39,7 @@ const Profile = () => {
           
         </div>
       </div>
-        <Posts />
+        <Posts userId={id} isProfile={true}/>
       
     </div>
   )

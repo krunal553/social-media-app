@@ -10,6 +10,7 @@ import likedIcon from '../../resources/images/liked.png';
 import commentIcon from '../../resources/svgs/comment.svg';
 
 import Comments from '../comments/Comments';
+import Profile from '../../pages/profile/Profile';
 
 const Post = ({ post }) => {
 
@@ -17,14 +18,20 @@ const Post = ({ post }) => {
     const [postLike, setPostLike] = useState(false);
     const navigate = useNavigate();
 
+    // console.log("profile pic "+post.profilePic);
+    // console.log("image pic "+post.image);
+    let url = 'http://127.0.0.1:8000/'
+    
+    const {_id, name, userId, profilePic, desc, image} = post;
+
     return (
-        
         <div className='post'>
             <div className="container">
                 <div className="user"> 
                     <div className="userInfo">
-                        <img src={post.profilePic} alt="" />
+                        <img src={url+profilePic} alt="image" />
                         <div className="details">
+                            
                             <Link to={`/profile/${post.userId}`} style={{ textDecoration: "none" }}>
                                 <span className='name'>{post.name}</span>
                             </Link>
@@ -37,7 +44,7 @@ const Post = ({ post }) => {
                 </div>
                 <div className="content">
                     <p>{post.desc}</p>
-                    <img src={post.image} alt="" onDoubleClick={()=>setPostLike(true)}/>
+                    <img src={url+image} alt="" onDoubleClick={()=>setPostLike(true)}/>
                 </div>
                 <div className="info">
                     <div className="item" onClick={()=>setPostLike(!postLike)} >

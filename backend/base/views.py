@@ -3,8 +3,9 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .posts import posts
-
+# from .tempData import *
+from .models import Post
+from .serializers import PostSerializer
 
 # Create your views here.
 
@@ -31,4 +32,21 @@ def getRoutes(request):
 
 @api_view(['GET'])
 def getPosts(request):
-    return Response(posts)
+    posts = Post.objects.all()
+    serializer = PostSerializer(posts, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def getPost(request, pk):
+    post = None
+    for i in posts:
+        if i['_id'] == pk:
+            post = i
+            break
+
+    return Response(post)
+
+
+@api_view(['GET'])
+def getStories(request):
+    return Response(stories)

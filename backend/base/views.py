@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 # from .tempData import *
-from .models import Post
-from .serializers import PostSerializer
+from .models import *
+from .serializers import *
 
 # Create your views here.
 
@@ -38,15 +38,20 @@ def getPosts(request):
 
 @api_view(['GET'])
 def getPost(request, pk):
-    post = None
-    for i in posts:
-        if i['_id'] == pk:
-            post = i
-            break
-
-    return Response(post)
+    post = Post.objects.get(_id=pk)
+    serializer = PostSerializer(post, many=False)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 def getStories(request):
-    return Response(stories)
+    stories = Story.objects.all()
+    serializer = StorySerializer(stories, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getPostComment(request, pid):
+    post_comments = PostComment.objects.filter(post_id=pid)
+    serializer = PostCommentSerializer(post_comments, many=True)
+    return Response(serializer.data)

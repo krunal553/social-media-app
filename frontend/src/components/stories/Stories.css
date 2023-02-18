@@ -1,0 +1,70 @@
+@media only screen and (max-width:420px) {
+    .stories {
+        height:70px !important;
+        width: 100vw;
+        align-items: center;
+    }
+    .stories .story {
+        /* flex: none; */
+        /* height: 50px; */
+        border-radius: 50% !important;
+        /* width: 50px; */
+        /* padding: 0px 25px; */
+    }
+    .stories .story img {
+
+        height: 70px !important;
+        width: 70px;
+        border-radius: 50% !important;
+        margin-top: 25px !important;
+    }
+    .stories .story span {
+        display: none;
+    }
+}
+#stories-id::-webkit-scrollbar {
+    display: none;
+}
+.stories {
+    /* border: 10px solid blue; */
+    display: flex;
+    gap: 10px;
+    height: 230px;
+    margin-bottom: 10px;
+    /* align-items: center; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 15px 15px;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.stories .story {
+    flex: 1;
+    position: relative;
+    border-radius: 15px;
+
+    /* border: 5px solid yellow; */
+    /* overflow: hidden; */
+}
+.stories .story img {
+    height: 100%;
+    
+    border-radius: 15px;
+    border: 2px solid rgb(179, 179, 179);
+
+    padding: 1px;
+
+    object-fit: cover;
+
+
+}
+
+.stories .story span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
